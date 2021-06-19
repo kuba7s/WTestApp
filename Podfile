@@ -8,7 +8,6 @@ target 'WTestApp' do
   # Pods for WTestApp
 
 pod "Alamofire"
-pod "SwiftyJSON"
 pod "CSVImporter"
 
 end

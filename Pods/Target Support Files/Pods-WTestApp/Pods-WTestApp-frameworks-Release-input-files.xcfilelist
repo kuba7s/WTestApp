@@ -2,4 +2,3 @@ ${PODS_ROOT}/Target Support Files/Pods-WTestApp/Pods-WTestApp-frameworks.sh
 ${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework
 ${BUILT_PRODUCTS_DIR}/CSVImporter/CSVImporter.framework
 ${BUILT_PRODUCTS_DIR}/HandySwift/HandySwift.framework
-${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework
