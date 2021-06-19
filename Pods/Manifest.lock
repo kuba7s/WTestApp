@@ -1,0 +1,28 @@
+PODS:
+  - Alamofire (5.4.2)
+  - CSVImporter (1.9.1):
+    - HandySwift (~> 2.5)
+  - HandySwift (2.8.0)
+  - SwiftyJSON (5.0.1)
+
+DEPENDENCIES:
+  - Alamofire
+  - CSVImporter
+  - SwiftyJSON
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - CSVImporter
+    - HandySwift
+    - SwiftyJSON
+
+SPEC CHECKSUMS:
+  Alamofire: bfbc4c2fe5909b1d94fb4ef2277c6b3727ef5dae
+  CSVImporter: 1543192354ecf8abccd2cc77947d190fd9cf2b18
+  HandySwift: 0a32500215166a56a58f972f7ce1641361307e8b
+  SwiftyJSON: 2f33a42c6fbc52764d96f13368585094bfd8aa5e
+
+PODFILE CHECKSUM: 313df3b44d138c30a29d34c34675c87b3beebecf
+
+COCOAPODS: 1.9.3

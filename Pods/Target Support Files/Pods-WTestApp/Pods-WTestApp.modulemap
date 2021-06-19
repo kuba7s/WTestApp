@@ -1,0 +1,6 @@
+framework module Pods_WTestApp {
+  umbrella header "Pods-WTestApp-umbrella.h"
+
+  export *
+  module * { export * }
+}

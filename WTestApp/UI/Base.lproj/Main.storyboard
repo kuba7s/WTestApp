@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="UXB-Zl-ch2">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="WTestApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="iWd-yg-dYj">
+                                <rect key="frame" x="0.0" y="172" width="414" height="690"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="FDW-ot-CAN"/>
+                                </connections>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ohh-Ck-DDd">
+                                <rect key="frame" x="168" y="482" width="78.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="dTv-bb-kk7">
+                                <rect key="frame" x="197" y="438" width="20" height="20"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="iWd-yg-dYj" secondAttribute="trailing" id="7E1-fi-7gF"/>
+                            <constraint firstItem="iWd-yg-dYj" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="32" id="7b1-Gb-5MW"/>
+                            <constraint firstItem="iWd-yg-dYj" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="E2T-H4-mbU"/>
+                            <constraint firstItem="dTv-bb-kk7" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="YXO-Aa-8wu"/>
+                            <constraint firstItem="dTv-bb-kk7" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="aBZ-E5-irD"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="iWd-yg-dYj" secondAttribute="bottom" id="dSr-ZY-mxb"/>
+                            <constraint firstItem="ohh-Ck-DDd" firstAttribute="top" secondItem="dTv-bb-kk7" secondAttribute="bottom" constant="24" id="l1s-wr-fA1"/>
+                            <constraint firstItem="ohh-Ck-DDd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="nDk-Nu-8Nw"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="8Ph-Oc-btJ">
+                        <barButtonItem key="leftBarButtonItem" title="Item" image="arrow.down.doc" catalog="system" id="FLm-mC-eru">
+                            <connections>
+                                <action selector="didTapDownloadButton:" destination="BYZ-38-t0r" id="I8a-Ja-QSa"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="trash" catalog="system" id="6Sn-4G-LcJ">
+                            <connections>
+                                <action selector="didTapDeleteButton:" destination="BYZ-38-t0r" id="W5H-iy-wOp"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="activityIndicator" destination="dTv-bb-kk7" id="uyI-0o-1dM"/>
+                        <outlet property="loadingLabel" destination="ohh-Ck-DDd" id="tcA-lv-82R"/>
+                        <outlet property="tableView" destination="iWd-yg-dYj" id="csk-WX-Q5Y"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1047.8260869565217" y="138.61607142857142"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="7uv-rx-sU2">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="UXB-Zl-ch2" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="1mq-Tt-20N">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="riM-zj-k0t"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1JZ-Br-JTn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="138.61607142857142"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="arrow.down.doc" catalog="system" width="115" height="128"/>
+        <image name="trash" catalog="system" width="121" height="128"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
